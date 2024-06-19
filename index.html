@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Search Part Name</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    /* Custom CSS for styling */
+    .jumbotron {
+        background-color:rgb(207, 112, 207);
+        color:white;
+      }
+      .container-fluid{
+        padding: 60px 60px;
+      }
+
+  
+
+    .logo{
+        font-size: 200px;
+        color: rgb(212, 133, 212);
+      }
+    /* Responsive adjustments */
+    @media screen and (max-width: 968px) {
+      .col-sm4 {
+        text-align: center;
+        margin: 25px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="jumbotron text-center">
+      <h1>Search Part Engine</h1>
+    </div>
+
+    <div class="form-group">
+      <label for="csvFile">Upload CSV File:</label>
+      <input type="file" class="form-control-file" id="csvFile" accept=".csv">
+    </div>
+
+    <div class="form-group">
+      <label for="searchInput">Search:</label>
+      <div class="input-group">
+        <input type="text" class="form-control" id="searchInput">
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button" onclick="searchPartNames()">ค้นหา</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="resultsList">Results:</label>
+      <select multiple class="form-control" id="resultsList"></select>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
